@@ -4,7 +4,7 @@ import React from 'react'
 const SubHeaderEric = () => {
   return (
     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Image style={styles.avatar} source={require('../assets/adaptive-icon.png')}></Image>
+            <Image style={styles.avatar} source={require('../assets/eric.jpeg')}></Image>
             <View style={{backgroundColor: 'lightblue', padding: 10, borderRadius: 10, width: '70%' }}>
                 <Text style={{ textAlign: 'left', fontWeight: '700', fontSize: 20 }}>
                     Texto a poner

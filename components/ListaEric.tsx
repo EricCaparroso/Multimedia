@@ -11,17 +11,17 @@ const ListaEric = () => {
           </Text>
           <ScrollView style={{ padding: 10 }}>
             <Text style={styles.cosasQmeGustanMuxoEstails}>Comer</Text>
-            <Text style={styles.cosasQmeGustanMuxoEstails}>Andar</Text>
-            <Text style={styles.cosasQmeGustanMuxoEstails}>Jugar</Text>
+            <Text style={styles.cosasQmeGustanMuxoEstails}>Baloncesto</Text>
+            <Text style={styles.cosasQmeGustanMuxoEstails}>Botanica</Text>
             <Text style={styles.cosasQmeGustanMuxoEstails}>Ver anime</Text>
-            <Text style={styles.cosasQmeGustanMuxoEstails}>Leer manga</Text>
-            <Text style={styles.cosasQmeGustanMuxoEstails}>Los coches</Text>
+            <Text style={styles.cosasQmeGustanMuxoEstails}>Leer</Text>
+            <Text style={styles.cosasQmeGustanMuxoEstails}>motocros</Text>
             <Text style={styles.cosasQmeGustanMuxoEstails}>Viajar</Text>
-            <Text style={styles.cosasQmeGustanMuxoEstails}>Escuchar musica</Text>
+            <Text style={styles.cosasQmeGustanMuxoEstails}>Hacer musica</Text>
           </ScrollView>
           <View style={styles.CentrarcodigoQR}>
               <View>
-                <QRCode value="https://github.com/pablo-ramos-hernandez" />
+                <QRCode value="https://github.com/EricCaparroso" />
               </View>
             </View>
     </View>
