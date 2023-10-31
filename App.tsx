@@ -1,61 +1,81 @@
-import { useState } from 'react';
-import { Button, Pressable, ScrollView, StyleSheet, Text, View, Image } from 'react-native';
+import { useState } from "react";
+import { StyleSheet, View } from "react-native";
 
-import Header from './components/Header';
-import Subheader from './components/Subheader';
-import Lista from './components/Lista';
-import Qr from './components/Qr';
-
+import Header from "./components/Header";
+import SubheaderPablo from "./components/SubheaderPablo";
+import ListaPablo from "./components/ListaPablo";
+import ListaEric from "./components/ListaEric";
+import SubHeaderEric from "./components/SubHeaderEric";
 
 export default function App() {
-  const [displayMyQR, setDisplayMyQR] = useState(true);
+  const [proyecto, setProyecto] = useState(true);
+  const [oscuro, setOscuro] = useState(true);
   return (
-    <View style={styles.container}>
-
-      <Header setDisplayMyQR={setDisplayMyQR}></Header>
-      {
-      displayMyQR?
-
-
-      <View style={styles.bodystails}>
-        <View>
-
-        <Subheader></Subheader>
+    <View>
+      {oscuro ? (
+        <View style={styles.containerWhite}>
+          <Header setProyecto={setProyecto} setOscuro={setOscuro}></Header>
+          {proyecto ? (
+            <View style={styles.carta}>
+              <SubheaderPablo></SubheaderPablo>
+              <ListaPablo></ListaPablo>
+            </View>
+          ) : (
+            <View style={styles.carta}>
+              <SubHeaderEric></SubHeaderEric>
+              <ListaEric></ListaEric>
+            </View>
+          )}
         </View>
-        <Lista></Lista>
-         
-        
-      </View>
-      :
-        <View style={styles.bodystails}>
-
-      
-        <Qr></Qr>
-    
+      ) : (
+        <View style={styles.containerOscuro}>
+          <Header setProyecto={setProyecto} setOscuro={setOscuro}></Header>
+          {proyecto ? (
+            <View style={styles.carta}>
+              <SubheaderPablo></SubheaderPablo>
+              <ListaPablo></ListaPablo>
+            </View>
+          ) : (
+            <View style={styles.carta}>
+              <SubHeaderEric></SubHeaderEric>
+              <ListaEric></ListaEric>
+            </View>
+          )}
         </View>
-      }
-
+      )}
     </View>
-
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
   bodystails: {
-    width: '100%',
     borderWidth: 2,
-    borderColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '85%'
+    borderColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    marginBottom: "50%",
   },
-  
- 
- 
+  containerOscuro: {
+    backgroundColor: "#000000",
+    width: "100%",
+    height: "100%",
+  },
+
+  bodystailsBlack: {
+    borderColor: "black",
+    width: "100%",
+    marginBottom: "50%",
+  },
+  carta: {
+    borderRadius: 15,
+    backgroundColor: "lightblue",
+    padding: 8,
+    marginTop: "15%",
+    marginLeft: "10%",
+    width: "80%",
+  },
+  containerWhite: {
+    width: "100%",
+  },
 });
